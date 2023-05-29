@@ -6,10 +6,30 @@ use App\Entity\Product;
 
 class PaymentProviderService
 {
+    /**
+     * Префикс купоня для фиксированной скидки
+     *
+     */
     public const COUPON_PREFIX_DIGIT = 'D';
+
+    /**
+     * Префикс купоня для скидки в процентах
+     */
     public const COUPON_PREFIX_PERCENT = 'P';
+
+    /**
+     * Paypal процессор обработки платежей
+     */
     public const PAYPAL_PAYMENT_PROCESSOR = 'paypal';
+
+    /**
+     * Stripe процессор обработки платежей
+     */
     public const STRIPE_PAYMENT_PROCESSOR = 'stripe';
+
+    /**
+     * Префиксы налоговых номеров по странам
+     */
     public const TAX_PREFIX_DE = 'DE';
     public const TAX_PREFIX_IT = 'IT';
     public const TAX_PREFIX_GR = 'GR';
@@ -27,6 +47,10 @@ class PaymentProviderService
     ) {
     }
 
+    /*
+     * При работе с деньгами лучше использовать decimal, но если под рукой его нет (PHP) и написать нет возможности
+     * работать с деньгами в копейках/центах будет неплохим решением
+     */
     public function calculatePrice(int $basePrice, ?string $taxNumber, ?string $couponCode): float
     {
         $couponDiscount = 0;

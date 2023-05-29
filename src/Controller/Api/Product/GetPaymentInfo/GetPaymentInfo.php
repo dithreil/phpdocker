@@ -42,6 +42,10 @@ class GetPaymentInfo extends ApiController
     ): JsonResponse {
         $errorMessages = [];
         $taxNumberErrors = $validator->validate($taxNumber, new TaxNumberConstraint());
+        /*
+         * Передавать персональные данные в строке запроса в открытом виде плохая идея,
+         * здесь только в качестве демонстрации в реальном проекте такого не будет
+         */
         if ($taxNumberErrors->count() > 0) {
             foreach ($taxNumberErrors as $error) {
                 $errorMessages[] = $error->getMessage();
