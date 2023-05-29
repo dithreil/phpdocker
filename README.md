@@ -6,5 +6,5 @@
     * используется команда `docker exec -it php_fpm bash` для подключения
     * выполнить `composer install`
     * далее нужно выполнить `php bin/console do:mi:mi`
-4. Далее можно проверить работу проверить работу API при помощи:
+4. Далее можно проверить работу API при помощи Postman и/или OpenApi:
 `http://localhost:53000/api/doc`
