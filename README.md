@@ -7,4 +7,4 @@
     * выполнить `composer install`
     * далее нужно выполнить `php bin/console do:mi:mi`
 4. Далее можно проверить работу проверить работу API при помощи:
-`http://localhost:53000/v1/api/doc`
+`http://localhost:53000/api/doc`
