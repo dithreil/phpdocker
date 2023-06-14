@@ -7,13 +7,13 @@ use App\Entity\Product;
 class PaymentProviderService
 {
     /**
-     * Префикс купоня для фиксированной скидки
+     * Префикс купона для фиксированной скидки
      *
      */
     public const COUPON_PREFIX_DIGIT = 'D';
 
     /**
-     * Префикс купоня для скидки в процентах
+     * Префикс купона для скидки в процентах
      */
     public const COUPON_PREFIX_PERCENT = 'P';
 
