@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller\Api\Product\Purchase;
+namespace App\Controller\Api\Purchase\PurchaseAction;
 
-use App\Controller\Api\Product\Purchase\DTO\PurchaseProductDto;
+use App\Controller\Api\Purchase\DTO\PurchaseProductDto;
 use App\Controller\ApiController;
 use App\Form\Product\PurchaseForm;
 use App\Model\Payment\PaymentInfoModel;

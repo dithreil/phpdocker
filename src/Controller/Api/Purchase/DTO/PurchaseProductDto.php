@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Api\Product\Purchase\DTO;
+namespace App\Controller\Api\Purchase\DTO;
 
 use App\Entity\Product;
 
@@ -58,6 +58,4 @@ class PurchaseProductDto
 
         return $this;
     }
-
-
 }
